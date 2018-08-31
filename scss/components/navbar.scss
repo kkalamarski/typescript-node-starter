@@ -1,0 +1,29 @@
+.ts-navbar {
+  background: #333333;
+
+  &__inner {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $gutter / 2;
+  }
+
+  &__brand {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+
+  &__navigation {
+    display: flex;
+  }
+
+  &__link {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+  }
+}

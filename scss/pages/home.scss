@@ -1,0 +1,21 @@
+.ts-home {
+  width: 100%;
+  max-width: $container-width;
+  margin: $gutter auto;
+
+  &__title {
+    text-align: center;
+    font-size: 2.5em;
+  }
+
+  &__slogan {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  &__date {
+    display: block;
+    text-align: center;
+    font-style: italic;
+  }
+}

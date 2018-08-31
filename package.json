@@ -4,9 +4,10 @@
   "description": "Simple starting point for node-typescript projects.",
   "main": "dist/server.js",
   "scripts": {
-    "start": "concurrently \"npm run ts:watch\" \"npm run serve:watch\"",
+    "start": "concurrently \"npm run scss:watch\" \"npm run ts:watch\" \"npm run serve:watch\"",
     "serve:watch": "nodemon dist/server.js",
     "ts:watch": "tsc -w",
+    "scss:watch": "node-sass -w scss/index.scss public/css/index.css",
     "test": "jest"
   },
   "keywords": [
@@ -20,6 +21,7 @@
     "concurrently": "^4.0.1",
     "nodemon": "^1.18.4",
     "ts-node": "^7.0.1",
+    "node-sass": "^4.9.3",
     "typescript": "^3.0.3",
     "@types/express": "^4.16.0"
   },

@@ -1,5 +1,8 @@
 import { Request, Response } from 'express'
 
-export default () => (req: Request, res: Response) => {
-  res.send(`<h1>Hello from typescript!</h1>`)
+export default ({ date }: { date: Date }) => (req: Request, res: Response) => {
+  res.render('pages/home', {
+    slogan: 'From Typescript!',
+    date: date.toDateString()
+  })
 }

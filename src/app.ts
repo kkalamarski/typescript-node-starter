@@ -1,13 +1,13 @@
 import express, { Express } from 'express'
-import * as HomeController from './controllers/home'
+import routes from './routes'
 
 const app: Express = express()
 
 app.set('view engine', 'pug')
 app.set('views', './views')
 app.set('port', process.env.PORT || 3000)
+app.use(express.static('public'))
 
-// Routes
-app.get('/', HomeController.get)
+app.use('/', routes)
 
 export default app
