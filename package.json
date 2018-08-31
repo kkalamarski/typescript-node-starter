@@ -5,8 +5,12 @@
   "main": "dist/server.js",
   "scripts": {
     "start": "concurrently \"npm run scss:watch\" \"npm run ts:watch\" \"npm run serve:watch\"",
+    "build": "npm run ts && npm run scss",
+    "serve": "node dist/server.js",
     "serve:watch": "nodemon dist/server.js",
     "ts:watch": "tsc -w",
+    "ts": "tsc",
+    "scss": "node-sass scss/index.scss public/css/index.css",
     "scss:watch": "node-sass -w scss/index.scss public/css/index.css",
     "test": "jest"
   },
