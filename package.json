@@ -1,0 +1,30 @@
+{
+  "name": "typescript-starter",
+  "version": "1.0.0",
+  "description": "Simple starting point for node-typescript projects.",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "concurrently \"npm run ts:watch\" \"npm run serve:watch\"",
+    "serve:watch": "nodemon dist/server.js",
+    "ts:watch": "tsc -w",
+    "test": "jest"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "boilerplate"
+  ],
+  "author": "Krzysztof Kalamarski",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "nodemon": "^1.18.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "@types/express": "^4.16.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "pug": "^2.0.3"
+  }
+}

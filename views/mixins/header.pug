@@ -1,0 +1,9 @@
+mixin header(title, slogan)
+  .jumbotron
+    h1= title
+
+    if slogan
+      h2= slogan
+
+    if block  
+      block
