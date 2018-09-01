@@ -1,8 +1,12 @@
 import { Request, Response } from 'express'
 
-export default ({ date }: { date: Date }) => (req: Request, res: Response) => {
+interface IDependencies {
+  date: Date;
+}
+
+export default (deps: IDependencies) => (req: Request, res: Response): void => {
   res.render('pages/home', {
     slogan: 'From Typescript!',
-    date: date.toDateString()
+    date: deps.date.toDateString()
   })
 }
