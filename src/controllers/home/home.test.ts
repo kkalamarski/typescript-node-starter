@@ -1,15 +1,14 @@
 import makeGet from './makeGet'
 import { mock, instance, when, verify } from 'ts-mockito'
-import { Response } from 'express'
-import expressMock from 'jest-mock-express'
+import { Response } from 'jest-express/lib/response';
 
-let get: any, date: Date, mockedDate: Date, res: Response
+let get: Function, date: Date, mockedDate: Date, res: Response
 
 mockedDate = mock(Date)
 when(mockedDate.toDateString()).thenReturn('test')
 
 beforeEach(() => {
-  res = expressMock.response()
+  res = new Response()
   date = instance(mockedDate)
 
   get = makeGet({
